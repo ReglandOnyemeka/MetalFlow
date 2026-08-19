@@ -1,0 +1,6 @@
+{
+  "name": "MetalFlow - Scrap Metal & Aluminum Index Marketplace",
+  "description": "Nigeria's transparent scrap metal price index, instant valuation calculator, certified dealer directory, and scrap lot marketplace for fabricators across North-West Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

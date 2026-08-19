@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-steel-primary: #2B4C7E;
+  --color-steel-dark: #1A3154;
+  --color-steel-light: #3D629B;
+  --color-aluminum-silver: #8A9EA7;
+  --color-aluminum-light: #E2E8EC;
+  --color-safety-amber: #E67E22;
+  --color-safety-amber-hover: #D35400;
+  --color-clean-slate: #F4F6F8;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-clean-slate);
+    color: #1E293B;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom Ticker & Scrollbar Styling */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 35s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Glass & Card Shadows for Bento Grid Theme */
+.scrap-card, .bento-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 1.5rem; /* rounded-3xl */
+}
+
+.scrap-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrap-card-hover:hover {
+  border-color: #2B4C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(43, 76, 126, 0.1), 0 4px 6px -2px rgba(43, 76, 126, 0.05);
+}
+
+.bento-card-dark {
+  background: #2B4C7E;
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px -2px rgba(43, 76, 126, 0.25);
+}
+
+.bento-card-silver {
+  background: #8A9EA7;
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+}
+
+.bento-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
